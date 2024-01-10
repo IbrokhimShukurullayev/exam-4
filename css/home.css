@@ -477,7 +477,7 @@ ul {
   font-weight: 400;
   line-height: 150%;
 }
-.row-card button {
+.row-card a {
   padding: 6px 20px;
   border: 1px solid #70C05B;
   color: var(--Main-Secondary, #70C05B);
@@ -490,7 +490,7 @@ ul {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.row .row-card button:hover {
+.row .row-card a:hover {
   background: var(--Main-Secondary, #70C05B);
   color: #fff;
 }

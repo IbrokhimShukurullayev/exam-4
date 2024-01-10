@@ -239,7 +239,7 @@
         line-height: 150%;
     }
 
-    &-card button {
+    &-card a {
         padding: 6px 20px;
         border: 1px solid #70C05B;
         color: var(--Main-Secondary, #70C05B);
@@ -251,7 +251,7 @@
         background: var(--Main-SecondaryMuted, #E5FFDE);
         transition: 0.5s;
     }
-    .row-card button:hover {
+    .row-card a:hover {
         background: var(--Main-Secondary, #70C05B);
         color: $white-color;
     }
