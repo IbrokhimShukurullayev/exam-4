@@ -1,0 +1,112 @@
+@import "../main.scss";
+
+body {
+    background: var(--Main-BGPage, #FBF8EC);
+}
+
+.company {
+    padding-top: 100px;
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__link-1 {
+        color: $text-color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%; 
+    }
+    &__link-1:active ,&__link-2:active  {
+        color: #8F8F8F;
+    }
+    &__link-2 {
+        color: #8F8F8F;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%; 
+    }
+    &__about {
+        display: flex;
+        align-items: center;
+        padding-bottom: 120px;
+    }
+    &__title {
+        max-width: 1208px;
+        margin: 0 auto;
+        padding-top: 16px;
+        color: $text-color;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+    &__list {
+        max-width: 669px;
+        color: var(--Main-Primary, #F63);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+    &__left {
+        background-image: url(../../images/Vector.svg);
+        background-repeat: no-repeat;
+    }
+    &__left img {
+        width: 100%;
+    }
+}
+
+.check {
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        align-items: start;
+        padding-bottom: 120px;
+    }
+    &__card {
+        display: flex;
+        align-items: start;
+        gap: 15px;
+    }
+    &__text {
+        h2 {
+            color: $text-color;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 150%;
+            padding-bottom: 16px; 
+        }
+        p {
+            color: $text-color;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 150%; 
+        }
+    }
+    &__lists {
+        max-width: 405px;
+    }
+    &__texts {
+        max-width: 315px;
+    }
+}
+
+.text {
+    max-width: 217px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding-bottom: 80px;
+    h2 {
+        color: var(--Main-Secondary, #70C05B);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 150%;
+        padding: 40px 30px;
+        border-radius: 16px;
+        background: var(--Main-SecondaryMuted, #E5FFDE);
+    }
+}

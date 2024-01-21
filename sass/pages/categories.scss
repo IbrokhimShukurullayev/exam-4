@@ -1,0 +1,29 @@
+@import "../main.scss";
+
+.catalog {
+    padding-top: 100px;
+    &__img {
+        position: relative;
+    }
+    &__title {
+        color: $text-color;
+        font-family: "Rubik";
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 150%; 
+        margin: 27px 0 60px 0;
+    }
+    &__img__text {
+        overflow: hidden;
+        padding: 80px 0 15px 0;
+        width: 100%;
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 150%;
+        position: absolute;
+        left: 10px;
+        bottom: 6px;
+        background: linear-gradient(180deg, rgba(112, 192, 91, 0.00) 0%, #70C05B 82.81%);
+    }
+}

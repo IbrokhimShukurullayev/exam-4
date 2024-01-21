@@ -1,0 +1,99 @@
+#footer {
+    background-image: url(../../images/bg.png);
+    background-color: #F9F4E2;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 25px 0;
+    column-gap: 200px;
+    @media (min-width: 1000px) {
+        flex-direction: row;
+        }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 40px;
+        gap: 20px;
+        padding-bottom: 20px;
+        @media (min-width: 1000px) {
+        flex-direction: row;
+        padding-bottom: 0;
+        }
+    }
+    &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 40px;
+        row-gap: 20px;
+        @media (min-width: 1000px) {
+        flex-direction: row;
+        }
+    }
+    &__link {
+        color: var(--Main-onSurface, #414141);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+    }
+    &__icon {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+    }
+    &__phone {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+    &__tel {
+        color: var(--Main-onSurface, #414141);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+    &-end {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-bottom: 25px;
+        @media (min-width: 1000px) {
+        justify-content: end;
+        }
+    }
+    &-title {
+        color: var(--Main-onSurface, #414141);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+    &-lists {
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding: 8px 0 8px;
+        background-color: $white-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        z-index: 99;
+        @media (min-width: 760px) {
+        display: none;
+    }
+    }
+    &-item-list {
+        color: var(--Main-onSurface, #414141);
+        text-align: center;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; 
+    }
+}
