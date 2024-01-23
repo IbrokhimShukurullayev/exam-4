@@ -7,19 +7,49 @@
         <link rel="stylesheet" href="../css/about.min.css">
     </head>
     <body>
+        <div id="navbar-toogle">
+            <div class="container">
+                <div class="navbar-toogle">
+                    <ul class="res__nav__list list">
+                        <li class="res__nav__item"><a href="#building" class="res__nav__link">Молоко, сыр, яйцо</a></li>
+                        <li class="res__nav__item"><a href="#services" class="res__nav__link">Хлеб</a></li>
+                        <li class="res__nav__item"><a href="#Услуги" class="res__nav__link">Фрукты и овощи</a></li>
+                        <li class="res__nav__item"><a href="#software" class="res__nav__link">Замороженные продукты</a></li>
+                    </ul>
+                    <ul class="res__nav__list">
+                        <li class="res__nav__item"><a href="#building" class="res__nav__link">Напитки</a></li>
+                        <li class="res__nav__item"><a href="#services" class="res__nav__link">Кондитерские изделия</a></li>
+                        <li class="res__nav__item"><a href="#Услуги" class="res__nav__link">Чай, кофе</a></li>
+                    </ul>
+                    <ul class="res__nav__list">
+                        <li class="res__nav__item"><a href="#building" class="res__nav__link">Бакалея</a></li>
+                        <li class="res__nav__item"><a href="#services" class="res__nav__link">Здоровое питание</a></li>
+                        <li class="res__nav__item"><a href="#Услуги" class="res__nav__link">Зоотовары</a></li>
+                    </ul>
+                    <ul class="res__nav__list">
+                        <li class="res__nav__item"><a href="#building" class="res__nav__link">Непродовольственные товары</a></li>
+                        <li class="res__nav__item"><a href="#services" class="res__nav__link">Детское питание</a></li>
+                        <li class="res__nav__item"><a href="#Услуги" class="res__nav__link">Мясо, птица, колбаса</a></li>
+                    </ul>
+                    <button id="navbar-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 512 512"><path fill="#ffffff" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
         <header id="header" class="header">
             <nav id="nav" class="nav container">
-                <a class="nav-logo-link" href="./pages/products.html">
+                <a class="nav-logo-link">
                     <img src="../images/Group.png" alt="">
                     <img class="logo" src="../images/Северяночка.png" alt="">
                 </a>
                 <div class="nav-search">
-                    <div class="nav-search-half">
+                    <button id="navbar-open" class="nav-search-half">
                         <img src="../images/menu.png" alt="menu">
-                        <p class="nav-search-text">
+                        <a href="./pages/categories.html" class="nav-search-text">
                             Каталог
-                        </p>
-                    </div>
+                        </a>
+                    </button>
                     <form class="nav-search-half-2">
                         <input type="search" placeholder="Найти товар">
                         <img src="../images/search.svg" alt="search">
@@ -39,7 +69,10 @@
                         </p>
                     </div>
                     <div class="div-item">
-                        <img src="../images/karzinka.svg" alt="heart">
+                        <img src="../images/carrdsa.png" alt="heart">
+                        <p class="div-item-text">
+                            0
+                        </p>
                         <p class="nav-item-list">
                             Корзина
                         </p>

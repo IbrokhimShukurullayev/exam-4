@@ -41,6 +41,12 @@
     line-height: 150%; 
 }
 
+.card:hover .card-img {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
 
 
 .card {
@@ -50,12 +56,17 @@
     background: $white-color;
     padding: 8px 8px;
     box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    transition: 0.5s;
+    overflow: hidden;
     &-price {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 8px 0;
     }
+    // &-card-price-1 {
+    //     position: relative;
+    // }
     &-titles {
         display: flex;
         justify-content: space-between;
@@ -103,6 +114,7 @@
         border-radius: 4px;
         border: 1px solid var(--Main-Secondary, #70C05B);
         transition: 0.5s;
+        background-color: transparent;
     }
     &-link:hover {
         color: $white-color;
@@ -125,10 +137,8 @@
     &-img {
         position: absolute;
         top: 5px;
-        right: 5px;
-    }
-
-
+        right: -40px;
+    }  
 }
 
 // home end
@@ -296,7 +306,7 @@
         gap: 30px;
         padding-bottom: 30px;
         @media (min-width: 1000px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 81px);
   }
     }
     &__link {
@@ -326,6 +336,9 @@
 .iframe {
     width: 100%;
 }
+
+
+
 
 // footer start
 
