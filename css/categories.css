@@ -216,7 +216,7 @@
   color: red;
 }
 
-.div-item-text {
+.div-item-text, .div-item-texts {
   position: absolute;
   width: 15px;
   height: 16px;
@@ -236,6 +236,10 @@
   background: var(--Main-Primary, #f63);
   padding: 2px;
   color: #fff;
+}
+
+.div-item-texts {
+  right: 25px;
 }
 
 .div-item {

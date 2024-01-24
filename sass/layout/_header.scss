@@ -162,7 +162,7 @@
   color: red;
 }
 
-.div-item-text {
+.div-item-text , .div-item-texts {
   position: absolute;
   width: 15px;
   height: 16px;
@@ -178,6 +178,10 @@
   color: $white-color;
 }
 
-.div-item {
+.div-item-texts {
+  right: 25px;
+}
+
+.div-item  {
   position: relative;
 }
