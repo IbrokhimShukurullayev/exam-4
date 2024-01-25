@@ -10,6 +10,10 @@
   z-index: 1199;
 }
 
+.header.navbar-shrink {
+  height: 70px;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,6 +65,17 @@
           align-items: center;
   gap: 10px;
 }
+.nav-logo-link p {
+  display: none;
+  color: #414141;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (min-width: 900px) {
+  .nav-logo-link p {
+    display: block;
+  }
+}
 .nav-search-text {
   display: none;
   width: 92px;
@@ -87,6 +102,9 @@
   -webkit-column-gap: 24px;
      -moz-column-gap: 24px;
           column-gap: 24px;
+}
+.nav-list a {
+  color: #414141;
 }
 @media (min-width: 760px) {
   .nav-list {
@@ -246,6 +264,11 @@
   position: relative;
 }
 
+.mode-btn {
+  border: none;
+  background-color: transparent;
+}
+
 #footer {
   background-image: url(../../images/bg.png);
   background-color: #F9F4E2;
@@ -402,6 +425,8 @@
       justify-content: space-around;
   text-align: center;
   z-index: 99;
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 760px) {
   .footer-lists {
@@ -417,14 +442,48 @@
   line-height: 150%;
 }
 
+.toogles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  background-color: #fff;
+}
+
+.footer__toogle {
+  position: fixed;
+  width: 100%;
+  bottom: -240px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 40px 0;
+}
+
+.text-neutral-content {
+  color: rgba(33, 32, 36, 0.8);
+}
+
+.font-semibold {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Rubik", sans-serif;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 html {
@@ -438,6 +497,7 @@ a {
 button {
   cursor: pointer;
   border: none;
+  background-color: transparent;
 }
 
 ul {

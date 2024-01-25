@@ -168,6 +168,9 @@
   }
 }
 
+.active {
+  display: block;
+}
 // home end
 
 // app start
@@ -203,14 +206,15 @@
     padding: 20px 40px;
     border-radius: 4px;
     background: var(--Main-SecondaryMuted, #e5ffde);
+    box-shadow: 0px 8px 16px 0px #e5ffde;
     @media (min-width: 760px) {
       flex-direction: row;
     }
   }
-  &-left {
-    background: url(../../images/app-card-2nd-bg.png) center no-repeat;
-    background-size: cover;
-  }
+  // &-left {
+  //   background: url(../../images/app-card-2nd-bg.png) center no-repeat;
+  //   background-size: cover;
+  // }
   &-title {
     max-width: 258px;
     color: $text-color;
@@ -336,7 +340,7 @@
     gap: 30px;
     padding-bottom: 30px;
     @media (min-width: 1000px) {
-      grid-template-columns: repeat(4, 81px);
+      grid-template-columns: repeat(4, 90px);
     }
   }
   &__link {
@@ -357,13 +361,13 @@
   }
 }
 
-.links {
-  border-radius: 4px;
+.active-tab {
+  background-color: $secondary-color;
   color: $white-color;
-  background: $secondary-color;
 }
 
-.iframe {
+
+iframe {
   width: 100%;
 }
 
@@ -398,4 +402,61 @@
   border-radius: 50%;
 }
 
-// footer start
+// dark start
+
+svg {
+  fill: $text-color;
+}
+
+.dark svg {
+  fill: $white-color;
+}
+
+.dark .header {
+  background-color: $dark-color;
+  color: $white-color;
+}
+
+.dark {
+  .nav-item-list , 
+ .nav-logo-link p,
+ .hero-title , .card-price-mainly,
+ .card-price-mainly-text,
+ .card-price-mainly-2,
+ .card-list,
+ .home-title ,  .row-card-date,
+ .row-card-title,  .row-card-list,
+ .footer__link,  .footer__tel,
+ .footer-title, .font-neutron {
+  color: $white-color;
+}
+}
+
+.dark #hero, .dark #home,
+.dark #tovar , .dark #location,
+.dark #row , .dark #footer   {
+  background-color: $dark-color;
+}
+
+.dark #footer {
+  background-image: none;
+}
+
+
+.dark .app-right {
+  background-color: $dark-color;
+  border: 1px solid $primary-color;
+
+}
+
+.dark .card , .dark .row-card  {
+  border: 1px solid $white-color;
+  background-color: $dark-color;
+}
+
+.dark .app-left {
+  background-color: $dark-color;
+  border: 1px solid #e5ffde;
+}
+
+

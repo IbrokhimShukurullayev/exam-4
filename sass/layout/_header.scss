@@ -10,6 +10,10 @@
   z-index: 1199;
 }
 
+.header.navbar-shrink {
+  height: 70px;
+}
+
 .nav {
   display: flex;
   height: 100%;
@@ -39,6 +43,15 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    p {
+      display: none;
+      color: $text-color;
+      font-size: 20px;
+      font-weight: 500;
+      @media (min-width: 900px) {
+      display: block;
+    }
+    }
   }
 
   &-search-text {
@@ -59,6 +72,9 @@
     justify-content: center;
     text-align: center;
     column-gap: 24px;
+    a {
+      color: $text-color;
+    }
     @media (min-width: 760px) {
       display: flex;
     }
@@ -185,3 +201,9 @@
 .div-item  {
   position: relative;
 }
+
+.mode-btn {
+  border: none;
+  background-color: transparent;
+}
+

@@ -84,6 +84,7 @@
         justify-content: space-around;
         text-align: center;
         z-index: 99;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
         @media (min-width: 760px) {
         display: none;
     }
@@ -96,4 +97,33 @@
         font-weight: 400;
         line-height: 150%; 
     }
+}
+
+.toogles {
+    display: flex;
+    align-items: start;
+    background-color: $white-color;
+}
+
+
+.footer__toogle {
+  position: fixed;
+  width: 100%;
+  bottom: -240px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: 0.5s;
+  background-color: $white-color;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 40px 0;
+}
+
+.text-neutral-content {
+    color: #212024cc;
+}
+
+.font-semibold {
+    font-size: 18px;
+    font-weight: 600;
 }

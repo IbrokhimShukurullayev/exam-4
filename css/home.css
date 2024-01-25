@@ -10,6 +10,10 @@
   z-index: 1199;
 }
 
+.header.navbar-shrink {
+  height: 70px;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,6 +65,17 @@
           align-items: center;
   gap: 10px;
 }
+.nav-logo-link p {
+  display: none;
+  color: #414141;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (min-width: 900px) {
+  .nav-logo-link p {
+    display: block;
+  }
+}
 .nav-search-text {
   display: none;
   width: 92px;
@@ -87,6 +102,9 @@
   -webkit-column-gap: 24px;
      -moz-column-gap: 24px;
           column-gap: 24px;
+}
+.nav-list a {
+  color: #414141;
 }
 @media (min-width: 760px) {
   .nav-list {
@@ -246,6 +264,11 @@
   position: relative;
 }
 
+.mode-btn {
+  border: none;
+  background-color: transparent;
+}
+
 #footer {
   background-image: url(../../images/bg.png);
   background-color: #F9F4E2;
@@ -402,6 +425,8 @@
       justify-content: space-around;
   text-align: center;
   z-index: 99;
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 760px) {
   .footer-lists {
@@ -417,14 +442,48 @@
   line-height: 150%;
 }
 
+.toogles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  background-color: #fff;
+}
+
+.footer__toogle {
+  position: fixed;
+  width: 100%;
+  bottom: -240px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 40px 0;
+}
+
+.text-neutral-content {
+  color: rgba(33, 32, 36, 0.8);
+}
+
+.font-semibold {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Rubik", sans-serif;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 html {
@@ -438,6 +497,7 @@ a {
 button {
   cursor: pointer;
   border: none;
+  background-color: transparent;
 }
 
 ul {
@@ -642,6 +702,10 @@ ul {
   font-size: 25px;
 }
 
+.active {
+  display: block;
+}
+
 .app {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -710,6 +774,8 @@ ul {
   padding: 20px 40px;
   border-radius: 4px;
   background: var(--Main-SecondaryMuted, #e5ffde);
+  -webkit-box-shadow: 0px 8px 16px 0px #e5ffde;
+          box-shadow: 0px 8px 16px 0px #e5ffde;
 }
 @media (min-width: 760px) {
   .app-left {
@@ -718,10 +784,6 @@ ul {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-}
-.app-left {
-  background: url(../../images/app-card-2nd-bg.png) center no-repeat;
-  background-size: cover;
 }
 .app-title {
   max-width: 258px;
@@ -862,7 +924,7 @@ ul {
 }
 @media (min-width: 1000px) {
   .location__list {
-    grid-template-columns: repeat(4, 81px);
+    grid-template-columns: repeat(4, 90px);
   }
 }
 .location__link {
@@ -883,13 +945,12 @@ ul {
   background: #4ee334;
 }
 
-.links {
-  border-radius: 4px;
+.active-tab {
+  background-color: #4ee334;
   color: #fff;
-  background: #4ee334;
 }
 
-.iframe {
+iframe {
   width: 100%;
 }
 
@@ -923,4 +984,55 @@ ul {
   background-color: #f20044;
   right: 50%;
   border-radius: 50%;
+}
+
+svg {
+  fill: #414141;
+}
+
+.dark svg {
+  fill: #fff;
+}
+
+.dark .header {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark .nav-item-list,
+.dark .nav-logo-link p,
+.dark .hero-title, .dark .card-price-mainly,
+.dark .card-price-mainly-text,
+.dark .card-price-mainly-2,
+.dark .card-list,
+.dark .home-title, .dark .row-card-date,
+.dark .row-card-title, .dark .row-card-list,
+.dark .footer__link, .dark .footer__tel,
+.dark .footer-title, .dark .font-neutron {
+  color: #fff;
+}
+
+.dark #hero, .dark #home,
+.dark #tovar, .dark #location,
+.dark #row, .dark #footer {
+  background-color: #000;
+}
+
+.dark #footer {
+  background-image: none;
+}
+
+.dark .app-right {
+  background-color: #000;
+  border: 1px solid #f63;
+}
+
+.dark .card, .dark .row-card {
+  border: 1px solid #fff;
+  background-color: #000;
+}
+
+.dark .app-left {
+  background-color: #000;
+  border: 1px solid #e5ffde;
 }
