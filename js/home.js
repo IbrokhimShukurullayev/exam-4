@@ -123,7 +123,7 @@ const newProducts = [
     price: "",
     disPrice: "599,99 ₽",
     img: "../images/image (2).svg",
-    discount: "0%",
+    discount: "",
     names: "",
     text: "",
   },
@@ -155,6 +155,7 @@ const newProducts = [
     text: "",
   },
 ];
+
 
 
 function getProducts({ name, price, img, disPrice, discount ,names,text}) {
@@ -225,3 +226,8 @@ products.forEach((el) => {
 newProducts.forEach((el) => {
   newCard.append(getProducts(el));
 });
+
+
+
+//rating
+
