@@ -1,39 +1,3 @@
-let toggle = document.getElementById("navbar-open");
-let menu = document.getElementById("navbar-toogle");
-let main = document.getElementById("main");
-let isOpen = false;
-
-toggle.addEventListener("click", () => {
-  isOpen = !isOpen;
-  if (isOpen) {
-    menu.style.top = "80px";
-  } else {
-    menu.style.top = "-240px";
-  }
-});
-
-main.addEventListener("click", () => {
-  menu.style.top = "-240px";
-});
-
-let Footertoggle = document.querySelector(".footer__fixsed-button");
-let Footermenu = document.querySelector(".footer__toogle");
-let Footermain = document.getElementById("main");
-let FooterisOpen = false;
-
-Footertoggle.addEventListener("click", () => {
-  FooterisOpen = !FooterisOpen;
-  if (FooterisOpen) {
-    Footermenu.style.bottom = "50px";
-  } else {
-    Footermenu.style.bottom = "-240px";
-  }
-});
-
-Footermain.addEventListener("click", () => {
-  Footermenu.style.bottom = "-240px";
-});
-
 let count = 0;
 const btn = document.querySelectorAll(".card-link");
 const span = document.querySelector(".div-item-text");
@@ -79,155 +43,257 @@ tabButtons.forEach((el, i) => {
 
 const homeCard = document.querySelector(".home-cards");
 const newCard = document.querySelector(".new__card");
+const buy = document.querySelector(".buy");
+const searchInput = document.querySelector(".search__input");
 
-const products = [
-  {
-    name: "Г/Ц Блинчики с мясом вес, Россия",
-    price: "50,50 ₽",
-    disPrice: "44,50 ₽",
-    img: "../images/image (2).svg",
-    discount: "-50%",
-    names: "С картой",
-    text: "Обычная",
-  },
-  {
-    name: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
-    price: "50,50 ₽",
-    disPrice: "44,50 ₽",
-    img: "../images/image (5).png",
-    discount: "-50%",
-    names: "С картой",
-  },
-  {
-    name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
-    price: "50,50 ₽",
-    disPrice: "44,50 ₽",
-    img: "../images/kitob.png",
-    discount: "-50%",
-    names: "С картой",
-    text: "Обычная",
-  },
-  {
-    name: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
-    price: "50,50 ₽",
-    disPrice: "44,50 ₽",
-    img: "../images/kitob2.png",
-    discount: "-50%",
-    names: "С картой",
-    text: "Обычная",
-  },
-];
-const newProducts = [
-  {
-    name: "Г/Ц Блинчики с мясом вес, Россия",
-    price: "",
-    disPrice: "599,99 ₽",
-    img: "../images/image (2).svg",
-    discount: "",
-    names: "",
-    text: "",
-  },
-  {
-    name: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
-    price: "",
-    disPrice: "44,50 ₽",
-    img: "../images/image (5).png",
-    discount: "",
-    names: "",
-    text: "",
-  },
-  {
-    name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
-    price: "",
-    disPrice: "159,99 ₽",
-    img: "../images/kitob.png",
-    discount: "",
-    names: "",
-    text: "",
-  },
-  {
-    name: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
-    price: "",
-    disPrice: "49,39 ₽",
-    img: "../images/kitob2.png",
-    discount: "",
-    names: "",
-    text: "",
-  },
-];
+let search = "";
 
 
+// const products = [
+//   {
+//     name: "Г/Ц Блинчики с мясом вес, Россия",
+//     price: "50,50 ₽",
+//     disPrice: "44,50 ₽",
+//     img: "../images/image (2).svg",
+//     discount: "-50%",
+//     names: "С картой",
+//     text: "Обычная",
+//     rating: 3,
+//   },
+//   {
+//     name: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+//     price: "50,50 ₽",
+//     disPrice: "44,50 ₽",
+//     img: "../images/image (5).png",
+//     discount: "-50%",
+//     names: "С картой",
+//     rating: 3.5,
+//   },
+//   {
+//     name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
+//     price: "50,50 ₽",
+//     disPrice: "44,50 ₽",
+//     img: "../images/kitob.png",
+//     discount: "-50%",
+//     names: "С картой",
+//     text: "Обычная",
+//     rating: 3.5,
+//   },
+//   {
+//     name: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
+//     price: "50,50 ₽",
+//     disPrice: "44,50 ₽",
+//     img: "../images/kitob2.png",
+//     discount: "-50%",
+//     names: "С картой",
+//     text: "Обычная",
+//     rating: 4.5,
+//   },
+// ];
+// const newProducts = [
+//   {
+//     name: "Г/Ц Блинчики с мясом вес, Россия",
+//     price: "",
+//     disPrice: "599,99 ₽",
+//     img: "../images/image (2).svg",
+//     discount: "",
+//     names: "",
+//     text: "",
+//     rating: 5,
+//   },
+//   {
+//     name: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+//     price: "",
+//     disPrice: "44,50 ₽",
+//     img: "../images/image (5).png",
+//     discount: "",
+//     names: "",
+//     text: "",
+//     rating: 2,
+//   },
+//   {
+//     name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
+//     price: "",
+//     disPrice: "159,99 ₽",
+//     img: "../images/kitob.png",
+//     discount: "",
+//     names: "",
+//     text: "",
+//     rating: 1,
+//   },
+//   {
+//     name: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
+//     price: "",
+//     disPrice: "49,39 ₽",
+//     img: "../images/kitob2.png",
+//     discount: "",
+//     names: "",
+//     text: "",
+//     rating: 5,
+//   },
+// ];
+// const buyProduct = [
+//   {
+//     name: "Г/Ц Блинчики с мясом вес, Россия",
+//     price: "",
+//     disPrice: "599,99 ₽",
+//     img: "../images/image (2).svg",
+//     discount: "",
+//     names: "",
+//     text: "",
+//     rating: 5,
+//   },
+//   {
+//     name: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+//     price: "",
+//     disPrice: "44,50 ₽",
+//     img: "../images/image (5).png",
+//     discount: "",
+//     names: "",
+//     text: "",
+//     rating: 2,
+//   },
+//   {
+//     name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
+//     price: "",
+//     disPrice: "159,99 ₽",
+//     img: "../images/kitob.png",
+//     discount: "",
+//     names: "",
+//     text: "",
+//     rating: 1,
+//   },
+//   {
+//     name: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
+//     price: "",
+//     disPrice: "49,39 ₽",
+//     img: "../images/kitob2.png",
+//     discount: "",
+//     names: "",
+//     text: "",
+//     rating: 5,
+//   },
+// ];
 
-function getProducts({ name, price, img, disPrice, discount ,names,text}) {
-  const card = document.createElement("div");
-  card.className = "card";
-  const cardImg = document.createElement("img");
-  cardImg.className = "img";
-  cardImg.src = img;
-  const cardList = document.createElement("h2");
-  cardList.className = "card-list";
-  const cardImages = document.createElement("img");
-  cardImages.className = "card-img";
-  cardImages.src = "../../images/Button (1).png";
-  const cardLinks = document.createElement("div");
-  cardLinks.className = "card-links";
-  const cardPrice = document.createElement("div");
-  cardPrice.className = "card-price";
-  const cardPrice1 = document.createElement("div");
-  cardPrice1.className = "card-price-1";
-  const cardPrice2 = document.createElement("div");
-  cardPrice2.className = "card-price-2";
-  const cardPriceImages = document.createElement("img");
-  cardPriceImages.className = "images";
-  cardPriceImages.src = "../../images/rating.png";
-  const cardLink = document.createElement("button");
-  cardLink.className = "card-link";
-  const cardPrecent = document.createElement("p");
-  cardPrecent.className = "card-precent";
-  const cardPriceMainly = document.createElement("h2");
-  cardPriceMainly.className = "card-price-mainly";
-  const cardPriceMainlyTitle = document.createElement("p");
-  cardPriceMainlyTitle.className = "card-price-mainly-text";
-  const cardPriceMainly2 = document.createElement("h2");
-  cardPriceMainly2.className = "card-price-mainly-2";
-  const cardPriceMainlyTitle2 = document.createElement("p");
-  cardPriceMainlyTitle2.className = "card-price-mainly-text";
+function getProducts({
+  id,
+  category,
+  description,
+  name,
+  price,
+  images,
+  disprice,
+  discount,
+  rating,
+}) {
 
-  const cardPrecentText = document.createTextNode(discount);
-  const cardPriceMainlyText = document.createTextNode(disPrice);
-  const cardPriceMainlyTitleText = document.createTextNode(names);
-  const cardPriceMainly2Text = document.createTextNode(price);
-  const cardPriceMainlyTitle2Text = document.createTextNode(text);
-  const cardListText = document.createTextNode(name);
-  const cardLinkText = document.createTextNode("В корзину");
+   function getrating() {
+     if (rating == 5) {
+       return `../images/rating(1).svg`;
+     } else if (rating == 4.5) {
+       return `../images/rating(8).png`;
+     } else if (rating == 4) {
+       return `../images/rating(2).svg`;
+     } else if (rating == 3.5) {
+       return `../images/rating(3).png`;
+     } else if (rating == 3) {
+       return `../images/rating(3).png`;
+     } else if (rating == 2) {
+       return `../images/rating.svg`;
+     } else if (rating == 1) {
+       return `../images/rating(7).png`;
+     }
+    
+  }
 
-  cardPrecent.appendChild(cardPrecentText);
-  cardPriceMainly.appendChild(cardPriceMainlyText);
-  cardPriceMainlyTitle.appendChild(cardPriceMainlyTitleText);
-  cardPriceMainly2.appendChild(cardPriceMainly2Text);
-  cardPriceMainlyTitle2.appendChild(cardPriceMainlyTitle2Text);
-  cardList.appendChild(cardListText);
-  cardLink.appendChild(cardLinkText);
+  let productInCart = cartProducts.find((pr) => pr.id === id);
 
-  cardLinks.append(cardLink);
-  cardPrice2.append(cardPriceMainly2, cardPriceMainlyTitle2);
-  cardPrice1.append(cardPriceMainly, cardPriceMainlyTitle);
-  cardPrice.append(cardImages, cardPrecent, cardPrice1, cardPrice2);
-  card.append(cardImg, cardPrice, cardList, cardPriceImages, cardLinks);
+  return `
+    <div class="card">
+      <img class="img" src=${images[1]} />
+      <div class="card-price">
+        <img class="card-img" src="../../images/Button (1).png" />
+        <p class="card-precent">20%</p>
+        <div class="card-price-1">
+          <h2 class="card-price-mainly">${price}</h2>
+          <p class="card-price-mainly-text">С картой</p>
+        </div>
+        <div class="card-price-2">
+          <h2 class="card-price-mainly-2">${disprice}</h2>
+          <p class="card-price-mainly-text">Обычная</p>
+        </div>
+      </div>
+      <h2 class="card-list">Apple</h2>
+      <h2 class="card-list">${description}</h2>
+      <img class="images" src=${getrating()} />
+      ${
+        productInCart
+          ? `<div class="card__plus-minus">
+              <button class="minus">-</button>
+              <span class="card__cantent">${productInCart.quantity}</span>
+              <button class="plus">+</button>
+            </div>`
+          : `<div class="card-links"><button onclick ="addToCart(${id})"  class="card-link">В корзину</button></div>`
+      }
+    </div>
+  `;
 
-  homeCard.appendChild(card);
-  return card;
 }
 
-products.forEach((el) => {
-  homeCard.append(getProducts(el));
+let result = products.filter((pr) => pr.discount).slice(-4)
+
+
+result.forEach((el) => {
+  homeCard.innerHTML += getProducts(el);
 });
 
-newProducts.forEach((el) => {
-  newCard.append(getProducts(el));
+
+
+
+let results = products.slice(-4);
+
+results.forEach((el) => {
+  newCard.innerHTML += getProducts(el);
 });
 
 
+let resultes = products.filter((pr) => pr.price).slice(-4);
 
-//rating
+resultes.forEach((el) => {
+  buy.innerHTML += getProducts(el);
+});
 
+
+function addToCart(id) {
+  let productFound = products.find ((pr) => pr.id === id);
+  let productInCart = cartProducts.find((pr) => pr.id === id);
+  if (productInCart) {
+
+    cartProducts = cartProducts.map(pr => {
+      if (pr.id === id) {
+        pr.quantity ++ 
+      }
+      return pr;
+    });
+  }else {
+    productFound.quantity= 1;
+    cartProducts.push(productFound)
+  }
+
+  getCartQuantity()
+
+}
+
+
+
+
+
+
+
+
+
+//<div class="card__plus-minus">
+  //<button class="minus">-</button>
+  //<p class="card__cantent">0</p>
+  //<button class="plus">+</button>
+//</div>;
