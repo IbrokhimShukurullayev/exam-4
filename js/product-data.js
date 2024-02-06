@@ -1,11 +1,11 @@
 const products = [
   {
     id: 1,
-    name: "Apple",
+    name: "Coffee",
     category: "Fruit",
     description: "A round fruit with a red, green, or yellow ",
-    price: "79.00$",
-    disprice: "70.50$",
+    price: "79",
+    disprice: "70",
     rating: 5,
     discount: "20%",
     images: [
@@ -21,8 +21,8 @@ const products = [
     category: "Fruit",
     description:
       "A long, curved fruit with a yellow skin and sweet, creamy white flesh.",
-    price: "55.00$",
-    disprice: "40.00$",
+    price: "55",
+    disprice: "40",
     rating: 5,
     discount: "20%",
     images: [
@@ -36,7 +36,7 @@ const products = [
     id: 3,
     name: "Bread",
     category: "Bakery",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A staple food made from flour, water, and yeast, baked into a loaf.",
     price: 88,
@@ -53,7 +53,7 @@ const products = [
     id: 4,
     name: "Broccoli",
     category: "Vegetable",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A green vegetable with a tree-like appearance, known for its high nutrient content.",
     price: 94,
@@ -70,7 +70,7 @@ const products = [
     id: 5,
     name: "Carrot",
     category: "Vegetable",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A root vegetable with a crunchy texture and a sweet, earthy flavor.",
     price: 82,
@@ -87,7 +87,7 @@ const products = [
     id: 6,
     name: "Cheese",
     category: "Dairy",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A dairy product made from milk, with a variety of textures and flavors.",
     price: 91,
@@ -104,7 +104,7 @@ const products = [
     id: 7,
     name: "Chicken",
     category: "Meat",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A type of poultry, often used as a source of protein in meals.",
     price: 68,
@@ -120,7 +120,7 @@ const products = [
   {
     id: 8,
     name: "Chocolate",
-    disprice: "70.50$",
+    disprice: "70",
     category: "Dessert",
     description:
       "A sweet food made from cacao beans, used in a variety of desserts and confections.",
@@ -138,7 +138,7 @@ const products = [
     id: 9,
     name: "Coffee",
     category: "Dessert",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A dark, bitter beverage made from roasted coffee beans, typically used as a pick-me-up.",
     price: 98,
@@ -155,7 +155,7 @@ const products = [
     id: 10,
     name: "Egg",
     category: "Dairy",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A oval-shaped reproductive body produced by birds, often used as a source of protein in meals.",
     price: 79,
@@ -172,7 +172,7 @@ const products = [
     id: 11,
     name: "Fish",
     category: "Meat",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A type of seafood, known for its omega-3 fatty acids and high protein content.",
     price: 89,
@@ -188,7 +188,7 @@ const products = [
   {
     id: 12,
     name: "Grapes",
-    disprice: "70.50$",
+    disprice: "70",
     category: "Fruit",
     description:
       "A small, sweet fruit that grows in clusters, often used in wine-making.",
@@ -206,7 +206,7 @@ const products = [
     id: 13,
     name: "Hamburger",
     category: "Fast food",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A sandwich made with a patty of ground beef, served on a bun with various toppings.",
     price: 87,
@@ -223,7 +223,7 @@ const products = [
     id: 14,
     name: "Hot dog",
     category: "Fast food",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A type of sausage served in a long roll, often used as a quick and convenient food.",
     price: 84,
@@ -240,7 +240,7 @@ const products = [
     id: 15,
     name: "Ice cream",
     category: "Dessert",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A frozen dessert made from cream, sugar, and flavorings, available in a variety of flavors.",
     price: 68,
@@ -257,7 +257,7 @@ const products = [
     id: 16,
     name: "Lemon",
     category: "Fruit",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A yellow citrus fruit with a tart, acidic flavor, often used in cooking and baking.",
     price: 74,
@@ -274,7 +274,7 @@ const products = [
     id: 17,
     name: "Eggs",
     category: "Dairy",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Eggs are oval-shaped reproductive structures produced by female birds and some reptiles.",
     price: 70,
@@ -291,7 +291,7 @@ const products = [
     id: 18,
     name: "Honey",
     category: "Dairy",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Honey is a sweet, sticky liquid made by bees from the nectar of flowers.",
     price: 87,
@@ -308,7 +308,7 @@ const products = [
     id: 19,
     name: "Ice Cream",
     category: "Dessert",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Ice cream is a frozen dessert made from cream, sugar, and flavorings.",
     price: 83,
@@ -324,7 +324,7 @@ const products = [
   {
     id: 20,
     name: "Jelly",
-    disprice: "70.50$",
+    disprice: "70",
     category: "Fruit",
     description:
       "Jelly is a sweet spread made from fruit juice and sugar, often used as a topping for toast or pastries.",
@@ -341,7 +341,7 @@ const products = [
   {
     id: 21,
     name: "Ketchup",
-    disprice: "70.50$",
+    disprice: "70",
     category: "Dairy",
     description:
       "Ketchup is a tangy sauce made from tomatoes, vinegar, sugar, and spices.",
@@ -359,7 +359,7 @@ const products = [
     id: 22,
     name: "Mango",
     category: "Fruit",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Mangoes are juicy, sweet tropical fruits with a fleshy interior and a large, oblong seed in the center.",
     price: 80,
@@ -376,7 +376,7 @@ const products = [
     id: 23,
     name: "Noodles",
     category: "Meat",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Noodles are a type of pasta made from wheat flour and water, often used in Asian cuisine.",
     price: 93,
@@ -393,7 +393,7 @@ const products = [
     id: 24,
     name: "Oatmeal",
     category: "Breakfast",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Oatmeal is a type of porridge made from oats that is often served for breakfast.",
     price: 94,
@@ -410,7 +410,7 @@ const products = [
     id: 25,
     name: "Bacon",
     category: "Breakfast",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Bacon is a popular breakfast food made from cured pork belly, it is newly delivered.",
     price: 71,
@@ -427,7 +427,7 @@ const products = [
     id: 26,
     name: "Pancakes",
     category: "Breakfast",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Pancakes are a popular breakfast food made from flour, eggs, and milk.",
     price: 63,
@@ -444,7 +444,7 @@ const products = [
     id: 27,
     name: "Waffles",
     category: "Breakfast",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Waffles are a type of breakfast food made from batter cooked in a waffle iron.",
     price: 97,
@@ -460,7 +460,7 @@ const products = [
   {
     id: 28,
     name: "Fried Rice",
-    disprice: "70.50$",
+    disprice: "70",
     category: "Lunch",
     description:
       "Fried Rice is a type of rice dish that is stir-fried in a pan with oil and other ingredients.",
@@ -476,7 +476,7 @@ const products = [
   },
   {
     id: 29,
-    disprice: "70.50$",
+    disprice: "70",
     name: "Spaghetti",
     category: "Lunch",
     description:
@@ -495,7 +495,7 @@ const products = [
     id: 30,
     name: "Pizza",
     category: "Lunch",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Pizza is a popular dish made from dough, sauce, cheese, and toppings.",
     price: 95,
@@ -512,7 +512,7 @@ const products = [
     id: 31,
     name: "Grilled Cheese",
     category: "Lunch",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "A grilled cheese sandwich is a hot sandwich made from cheese and bread.",
     price: 100,
@@ -529,7 +529,7 @@ const products = [
     id: 32,
     name: "Steak",
     category: "Dinner",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Steak is a popular dinner dish made from a cut of beef that is usually grilled or pan-fried.",
     price: 63,
@@ -546,7 +546,7 @@ const products = [
     id: 33,
     name: "Salmon",
     category: "Dinner",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Salmon is a type of fish that is often grilled or baked and served as a main course.",
     price: 82,
@@ -563,7 +563,7 @@ const products = [
     id: 34,
     name: "Chicken Alfredo",
     category: "Dinner",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Chicken Alfredo is a pasta dish made with chicken, alsjfkdlkasdfhlkjh.",
     price: 94,
@@ -580,7 +580,7 @@ const products = [
     id: 35,
     name: "Lasagna",
     category: "Dinner",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Lasagna is a type of pasta dish made with layers of pasta, sauce, cheese, and meat or vegetables.",
     price: 70,
@@ -597,7 +597,7 @@ const products = [
     id: 36,
     name: "Chocolate Chip Cookies",
     category: "Dessert",
-    disprice: "70.50$",
+    disprice: "70",
     description:
       "Chocolate Chip Cookies are a type of cookie made from flour, sugar, butter, and chocolate chips.",
     price: 98,

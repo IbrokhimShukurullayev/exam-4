@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../css/cart.min.css" />
   </head>
   <body>
@@ -84,12 +91,12 @@
         <a class="nav-logo-link">
           <img src="../images/Group.png" alt="" />
           <p>Северяночка</p>
-          <!-- <img class="logo" src="./images/Северяночка.png" alt="" /> -->
+          <!-- <img class="logo" src="../images/Северяночка.png" alt="" /> -->
         </a>
         <div class="nav-search">
           <button id="navbar-open" class="nav-search-half">
             <img src="../images/menu.png" alt="menu" />
-            <a href="../pages/categories.html" class="nav-search-text">
+            <a href="./pages/categories.html" class="nav-search-text">
               Каталог
             </a>
           </button>
@@ -104,7 +111,7 @@
         </div>
         <div class="nav-list">
           <div class="div-item">
-            <a href="pages/favorite.html">
+            <a href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -119,7 +126,7 @@
                   fill="current-color"
                 />
               </svg>
-              <p class="div-item-texts">0</p>
+              <span class="div-item-texts"></span>
               <p class="nav-item-list">Избранное</p>
             </a>
           </div>
@@ -161,7 +168,7 @@
             </a>
           </div>
           <div class="div-item">
-            <a href="pages/cart.html">
+            <a href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -188,7 +195,7 @@
                   fill="current-color"
                 />
               </svg>
-              <p class="div-item-text">0</p>
+              <span class="div-item-text"></span>
               <p class="nav-item-list">Корзина</p>
             </a>
           </div>
@@ -216,9 +223,169 @@
         </button>
       </nav>
     </header>
-    <script src="../js/product-data.js"></script>
-    <script src="../js/products.js"></script>
+    <main id="main">
+      <section id="hero__cart">
+        <div class="container hero__cart">
+          <div class="line__cramp">
+            <a href="../index.html"
+              >Главная
+              <img src="../images/chevron-right.png" alt="" />
+            </a>
+            <a href="#">Все продукты</a>
+          </div>
+          <span class="hero__cart__title">
+            Корзина
+            <p class="product__count"></p>
+          </span>
+          <div class="control__product">
+            <label class="select__all">
+              <input class="select__product__input" type="checkbox" />
+              <p>Выделить всё</p>
+            </label>
+            <button class="delete__all">Удалить выбранные</button>
+          </div>
+          <div class="hero__cart__row">
+            <div class="hero__cart__left"></div>
+            <div class="hero__cart__right">
+              <div class="hero__cart__right__top">
+                <form class="nav-bottom">
+                  <input type="checkbox" class="switch" />
+                  <span>Списать 200 ₽</span>
+                </form>
+                <p>На карте накоплено 200 ₽</p>
+              </div>
+              <div class="hero__cart__right__center">
+                <div class="size__product">
+                  <p><span>3</span> товара</p>
+                  <h4 class="all__price">258,10 ₽</h4>
+                </div>
+                <div class="discount__price">
+                  <p>Скидка</p>
+                  <h4>-8,01 ₽</h4>
+                </div>
+              </div>
+              <div class="hero__cart__right__bottom">
+                <div class="total__price">
+                  <div>
+                    <p>Итог</p>
+                    <h2>250,09 ₽</h2>
+                  </div>
+                  <img src="../images/bonus.svg" alt="" />
+                </div>
+              </div>
+              <div class="hero__cart__right__buttons">
+                <button class="chekout__btn">Оформить заказ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="container">
+      <div class="footer-lists">
+        <button class="footer__fixsed-button">
+          <img src="../images/Frame 211 (2).png" alt="heart" />
+          <p class="footer-item-list">Каталог</p>
+        </button>
+        <div class="div-item">
+          <a href="../pages/favorite.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="current-color"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.2046 4.25644C14.3299 3.13067 15.8564 2.49817 17.4482 2.49817C19.0399 2.49817 20.5664 3.13063 21.6916 4.25636C22.8174 5.38164 23.45 6.90829 23.45 8.49999C23.45 10.0917 22.8175 11.6183 21.6917 12.7435C21.6917 12.7436 21.6917 12.7435 21.6917 12.7435L12.8517 21.5835C12.6565 21.7788 12.3399 21.7788 12.1446 21.5835L3.30461 12.7435C0.960963 10.3999 0.960963 6.60009 3.30461 4.25644C5.64826 1.91279 9.44807 1.91279 11.7917 4.25644L12.4982 4.96289L13.2046 4.25644C13.2046 4.25641 13.2046 4.25647 13.2046 4.25644ZM17.4482 3.49817C16.1217 3.49817 14.8496 4.02528 13.9118 4.96346L12.8517 6.02355C12.758 6.11732 12.6308 6.16999 12.4982 6.16999C12.3656 6.16999 12.2384 6.11732 12.1446 6.02355L11.0846 4.96355C9.13149 3.01042 5.96484 3.01042 4.01172 4.96355C2.05859 6.91667 2.05859 10.0833 4.01172 12.0364L12.4982 20.5229L20.9846 12.0364C21.9228 11.0987 22.45 9.82648 22.45 8.49999C22.45 7.17351 21.9229 5.90138 20.9847 4.96363C20.0469 4.02544 18.7747 3.49817 17.4482 3.49817Z"
+                fill="current-color"
+              />
+            </svg>
+            <span class="div-item-textsesss"></span>
+            <p class="footer-item-list">Избранное</p>
+          </a>
+        </div>
+        <button class="nav-item">
+          <img src="../images/Frame 211.svg" alt="heart" />
+          <p class="footer-item-list">продукты</p>
+        </button>
+        <div class="div-item">
+          <a href="../pages/cart.html" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="current-color"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.5 21C5.5 19.6193 6.61929 18.5 8 18.5C9.38071 18.5 10.5 19.6193 10.5 21C10.5 22.3807 9.38071 23.5 8 23.5C6.61929 23.5 5.5 22.3807 5.5 21ZM8 19.5C7.17157 19.5 6.5 20.1716 6.5 21C6.5 21.8284 7.17157 22.5 8 22.5C8.82843 22.5 9.5 21.8284 9.5 21C9.5 20.1716 8.82843 19.5 8 19.5Z"
+                fill="current-color"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17.5 21C17.5 19.6193 18.6193 18.5 20 18.5C21.3807 18.5 22.5 19.6193 22.5 21C22.5 22.3807 21.3807 23.5 20 23.5C18.6193 23.5 17.5 22.3807 17.5 21ZM20 19.5C19.1716 19.5 18.5 20.1716 18.5 21C18.5 21.8284 19.1716 22.5 20 22.5C20.8284 22.5 21.5 21.8284 21.5 21C21.5 20.1716 20.8284 19.5 20 19.5Z"
+                fill="current-color"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1 0.5C0.723858 0.5 0.5 0.723858 0.5 1C0.5 1.27614 0.723858 1.5 1 1.5H4.58051C5.33783 5.79147 6.10333 10.0643 6.74931 14.3709C6.93288 15.5947 7.98416 16.5 9.22165 16.5H19.3597C20.5514 16.5 21.5774 15.6588 21.8111 14.4903L23.2503 7.29417C23.436 6.36599 22.726 5.5 21.7795 5.5H7.16046C6.8575 5.5 6.57797 5.58901 6.34436 5.74093L5.49239 0.913107C5.45023 0.674179 5.24262 0.5 5 0.5H1ZM6.666 7.07417C6.62065 6.77187 6.85478 6.5 7.16046 6.5H21.7795C22.095 6.5 22.3316 6.78866 22.2698 7.09806L20.8305 14.2942C20.6903 14.9953 20.0747 15.5 19.3597 15.5H9.22165C8.47916 15.5 7.84839 14.9568 7.73825 14.2225L6.666 7.07417Z"
+                fill="current-color"
+              />
+            </svg>
+            <p class="div-item-textes"></p>
+            <p class="footer-item-list">Корзина</p>
+          </a>
+        </div>
+        <button class="nav-item">
+          <img src="../images/avatar.png" alt="heart" />
+        </button>
+      </div>
+    </div>
+    <div class="footer__toogle">
+      <div class="container">
+        <div class="toogles">
+          <ul class="res__nav__list list">
+            <li class="res__nav__item">
+              <a href="#building" class="res__nav__link">Молоко, сыр, яйцо</a>
+            </li>
+            <li class="res__nav__item">
+              <a href="#services" class="res__nav__link">Хлеб</a>
+            </li>
+            <li class="res__nav__item">
+              <a href="#Услуги" class="res__nav__link">Фрукты и овощи</a>
+            </li>
+            <li class="res__nav__item">
+              <a href="#software" class="res__nav__link"
+                >Замороженные продукты</a
+              >
+            </li>
+          </ul>
+          <ul class="res__nav__list">
+            <li class="res__nav__item">
+              <a href="#building" class="res__nav__link">Напитки</a>
+            </li>
+            <li class="res__nav__item">
+              <a href="#services" class="res__nav__link"
+                >Кондитерские изделия</a
+              >
+            </li>
+            <li class="res__nav__item">
+              <a href="#Услуги" class="res__nav__link">Чай, кофе</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <script src="../js/const.js"></script>
+    <script src="../js/product-data.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
   </body>
 </html>

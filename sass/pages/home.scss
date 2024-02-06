@@ -25,15 +25,17 @@
   grid-template-columns: repeat(1, 1fr);
   justify-items: center;
   align-items: center;
-  gap: 40px;
+  gap: 100px;
   @media (min-width: 760px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media (min-width: 1000px) {
     grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
   }
   @media (min-width: 1200px) {
     grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
   }
 }
 
@@ -42,12 +44,6 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
-}
-
-.card:hover .card-img {
-  position: absolute;
-  top: 5px;
-  right: 5px;
 }
 
 .card {
@@ -59,6 +55,10 @@
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
   overflow: hidden;
+  transform: scale(1.1);
+  @media (min-width: 760px) {
+    transform: scale(1);
+  }
   &-price {
     display: flex;
     align-items: center;
@@ -142,8 +142,8 @@
   }
   &-img {
     position: absolute;
-    top: 5px;
-    right: -40px;
+    top: 13px;
+    right: 13px;
   }
   &__plus-minus {
     display: flex;
@@ -291,7 +291,7 @@
   &-card a {
     padding: 6px 20px;
     border: 1px solid #70c05b;
-    color: $secondary-color;
+    color: #70c05b;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -301,7 +301,7 @@
     transition: 0.5s;
   }
   .row-card a:hover {
-    background: $secondary-color;
+    background: #70c05b;
     color: $white-color;
   }
 }
@@ -366,10 +366,9 @@
 }
 
 .active-tab {
-  background-color: $secondary-color;
+  background-color: #70c05b;
   color: $white-color;
 }
-
 
 iframe {
   width: 100%;
@@ -408,9 +407,9 @@ iframe {
 
 // dark start
 
-svg {
-  fill: $text-color;
-}
+// svg {
+//   fill: $text-color;
+// }
 
 .dark svg {
   fill: $white-color;
@@ -422,23 +421,31 @@ svg {
 }
 
 .dark {
-  .nav-item-list , 
- .nav-logo-link p,
- .hero-title , .card-price-mainly,
- .card-price-mainly-text,
- .card-price-mainly-2,
- .card-list,
- .home-title ,  .row-card-date,
- .row-card-title,  .row-card-list,
- .footer__link,  .footer__tel,
- .footer-title, .font-neutron {
-  color: $white-color;
-}
+  .nav-item-list,
+  .nav-logo-link p,
+  .hero-title,
+  .card-price-mainly,
+  .card-price-mainly-text,
+  .card-price-mainly-2,
+  .card-list,
+  .home-title,
+  .row-card-date,
+  .row-card-title,
+  .row-card-list,
+  .footer__link,
+  .footer__tel,
+  .footer-title,
+  .font-neutron {
+    color: $white-color;
+  }
 }
 
-.dark #hero, .dark #home,
-.dark #tovar , .dark #location,
-.dark #row , .dark #footer   {
+.dark #hero,
+.dark #home,
+.dark #tovar,
+.dark #location,
+.dark #row,
+.dark #footer {
   background-color: $dark-color;
 }
 
@@ -446,15 +453,14 @@ svg {
   background-image: none;
 }
 
-
 .dark .app-right {
   background-color: $dark-color;
   border: 1px solid $primary-color;
-
 }
 
-.dark .card , .dark .row-card  {
-  border: 1px solid $white-color;
+.dark .card,
+.dark .row-card {
+  // border: 1px solid $white-color;
   background-color: $dark-color;
 }
 
@@ -465,10 +471,17 @@ svg {
 
 .new__card .card-precent {
   background-color: transparent;
+  display: none;
 }
 
-.img:hover {
+.img {
   transform: scale(1.1);
 }
 
+.img:hover {
+  transform: scale(1.13);
+}
 
+.btn-danger {
+  background-color: red;
+}

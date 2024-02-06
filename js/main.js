@@ -16,7 +16,6 @@ function shrink() {
 
 //dark mode
 
-
 let modeBtn = document.getElementById("mode-btn");
 
 modeBtn.addEventListener("click", function () {
@@ -63,27 +62,4 @@ Footertoggle.addEventListener("click", () => {
 Footermain.addEventListener("click", () => {
   Footermenu.style.bottom = "-240px";
 });
-
-
-//cart
-
-
-const cartQuantity = document.querySelector(".div-item-text");
-
-
-// let cartJson = localStorage.getItem("cart");
-
-let cartProducts = [];
-
-
-
-
-function getCartQuantity() {
-  cartQuantity.textContent = cartProducts.length;
-}
-
-
-getCartQuantity();
-
-
 

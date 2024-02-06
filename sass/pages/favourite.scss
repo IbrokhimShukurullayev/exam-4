@@ -1,0 +1,48 @@
+@import "../main.scss";
+@import "../base/font.scss";
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 70px;
+  @media (min-width: 760px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.line__cramp {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 27px;
+  padding-top: 100px;
+}
+.line__cramp a {
+  color: #414141;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+.line__cramp a:nth-child(2) {
+  color: silver;
+}
+
+.home-titles {
+  color: $text-color;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 150%;
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../css/products.min.css" />
-    <link rel="stylesheet" href="../css/home.min.css" />
+    <!-- <link rel="stylesheet" href="../css/home.min.css" /> -->
   </head>
   <body>
     <div id="navbar-toogle">
@@ -105,7 +105,7 @@
         </div>
         <div class="nav-list">
           <div class="div-item">
-            <a href="pages/favorite.html">
+            <a href="../pages/favorite.html">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -120,7 +120,7 @@
                   fill="current-color"
                 />
               </svg>
-              <span class="div-item-texts">0</span>
+              <span class="div-item-texts"></span>
               <p class="nav-item-list">Избранное</p>
             </a>
           </div>
@@ -162,7 +162,7 @@
             </a>
           </div>
           <div class="div-item">
-            <a href="pages/cart.html">
+            <a href="../pages/cart.html" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -223,111 +223,73 @@
           <div class="card-titles">
             <h1 class="home-title">Все продукты</h1>
           </div>
-          <div class="home-cards buy"></div>
+          <div class="home-cards"></div>
           <ul class="pagination"></ul>
         </div>
       </section>
     </main>
-    <footer id="footer">
-      <div class="container">
-        <div class="footer">
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="#" class="footer__link"
-                ><img src="../images/logo (1).png" alt=""
-              /></a>
-            </li>
-            <li class="footer__item">
-              <a href="./pages/vacancy.html" class="footer__link">О компании</a>
-            </li>
-            <li class="footer__item">
-              <a href="./pages/contact.html" class="footer__link">Контакты</a>
-            </li>
-            <li class="footer__item">
-              <a href="./pages/articles.html" class="footer__link">Контактыр</a>
-            </li>
-            <li class="footer__item">
-              <a href="./pages/cart.html" class="footer__link">Статьи</a>
-            </li>
-            <li class="footer__item">
-              <a href="./pages/favorite.html" class="footer__link"
-                >Политика обработки персональных данных</a
-              >
-            </li>
-          </ul>
-          <div class="footer__social">
-            <ul class="footer__icon">
-              <li class="footer__icon__item">
-                <a href="#" class="footer__icon__link"
-                  ><img src="../images/instagram.png" alt=""
-                /></a>
-              </li>
-              <li class="footer__icon__item">
-                <a href="#" class="footer__icon__link"
-                  ><img src="../images/vkontakte.png" alt=""
-                /></a>
-              </li>
-              <li class="footer__icon__item">
-                <a href="#" class="footer__icon__link"
-                  ><img src="../images/facebook.png" alt=""
-                /></a>
-              </li>
-              <li class="footer__icon__item">
-                <a href="#" class="footer__icon__link"
-                  ><img src="../images/ok.png" alt=""
-                /></a>
-              </li>
-            </ul>
-            <div class="footer__phone">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="24"
-                viewBox="0 0 25 24"
-                fill="current-color"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M1.03055 5.62795C0.79859 3.78205 2.37862 2.5 4.07554 2.5H7.6672C8.39213 2.5 9.01333 3.01844 9.14301 3.73167L9.74935 7.06653C9.93046 8.06268 9.67133 9.08845 9.03884 9.87906L8.31545 10.7833C8.18654 10.9444 8.17475 11.1581 8.27434 11.3205C8.7439 12.0862 9.58857 13.3797 10.3553 14.1464C11.1221 14.9132 12.4156 15.7579 13.1813 16.2274C13.3437 16.327 13.5573 16.3152 13.7185 16.1863L14.6227 15.4629C15.4133 14.8304 16.4391 14.5713 17.4352 14.7524L20.7701 15.3588C21.4833 15.4885 22.0018 16.1096 22.0018 16.8346V20.1816C22.0018 22.0032 20.5508 23.624 18.6171 23.313C15.3045 22.7803 10.5694 21.0768 6.63538 16.8402C2.81033 12.7209 1.39331 8.51475 1.03055 5.62795ZM4.07554 3.5C2.81103 3.5 1.88547 4.41084 2.02275 5.50326C2.36104 8.19537 3.69444 12.2034 7.36818 16.1598C11.1177 20.1977 15.6307 21.8199 18.7758 22.3257C19.9703 22.5178 21.0018 21.5285 21.0018 20.1816V16.8346C21.0018 16.5929 20.829 16.3859 20.5912 16.3426L17.2564 15.7363C16.5448 15.6069 15.8121 15.792 15.2474 16.2438L14.3432 16.9672C13.8653 17.3495 13.1937 17.4081 12.6585 17.0799C11.8953 16.6119 10.508 15.7133 9.64823 14.8536C8.78849 13.9938 7.8899 12.6064 7.42187 11.8433C7.09367 11.3081 7.15231 10.6364 7.53458 10.1586L8.25797 9.25437C8.70975 8.68964 8.89485 7.95695 8.76548 7.24541L8.15914 3.91056C8.11591 3.67281 7.90885 3.5 7.6672 3.5H4.07554Z"
-                  fill="current-color"
-                />
-              </svg>
-              <a class="footer__tel" href="tel:+998 99 529 29 29"
-                >+998 99 529 29 29</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="footer-end">
-          <h2 class="footer-title">Дизайн</h2>
-          <a
-            class="font-neutron text-2xl text-neutral-content font-semibold"
-            href="https://neutron.uz"
-            target="_blank"
-            >neutron.uz</a
-          >
-        </div>
-      </div>
-    </footer>
     <div class="container">
       <div class="footer-lists">
         <button class="footer__fixsed-button">
           <img src="../images/Frame 211 (2).png" alt="heart" />
           <p class="footer-item-list">Каталог</p>
         </button>
-        <button class="nav-item">
-          <img src="../images/heart.png" alt="heart" />
-          <p class="footer-item-list">Избранное</p>
-        </button>
+        <div class="div-item">
+          <a href="../pages/favorite.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="current-color"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.2046 4.25644C14.3299 3.13067 15.8564 2.49817 17.4482 2.49817C19.0399 2.49817 20.5664 3.13063 21.6916 4.25636C22.8174 5.38164 23.45 6.90829 23.45 8.49999C23.45 10.0917 22.8175 11.6183 21.6917 12.7435C21.6917 12.7436 21.6917 12.7435 21.6917 12.7435L12.8517 21.5835C12.6565 21.7788 12.3399 21.7788 12.1446 21.5835L3.30461 12.7435C0.960963 10.3999 0.960963 6.60009 3.30461 4.25644C5.64826 1.91279 9.44807 1.91279 11.7917 4.25644L12.4982 4.96289L13.2046 4.25644C13.2046 4.25641 13.2046 4.25647 13.2046 4.25644ZM17.4482 3.49817C16.1217 3.49817 14.8496 4.02528 13.9118 4.96346L12.8517 6.02355C12.758 6.11732 12.6308 6.16999 12.4982 6.16999C12.3656 6.16999 12.2384 6.11732 12.1446 6.02355L11.0846 4.96355C9.13149 3.01042 5.96484 3.01042 4.01172 4.96355C2.05859 6.91667 2.05859 10.0833 4.01172 12.0364L12.4982 20.5229L20.9846 12.0364C21.9228 11.0987 22.45 9.82648 22.45 8.49999C22.45 7.17351 21.9229 5.90138 20.9847 4.96363C20.0469 4.02544 18.7747 3.49817 17.4482 3.49817Z"
+                fill="current-color"
+              />
+            </svg>
+            <span class="div-item-textsesss"></span>
+            <p class="footer-item-list">Избранное</p>
+          </a>
+        </div>
         <button class="nav-item">
           <img src="../images/Frame 211.svg" alt="heart" />
           <p class="footer-item-list">продукты</p>
         </button>
-        <button class="nav-item">
-          <img src="../images/karzinka.svg" alt="heart" />
-          <p class="footer-item-list">Корзина</p>
-        </button>
+        <div class="div-item">
+          <a href="../pages/cart.html" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="current-color"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.5 21C5.5 19.6193 6.61929 18.5 8 18.5C9.38071 18.5 10.5 19.6193 10.5 21C10.5 22.3807 9.38071 23.5 8 23.5C6.61929 23.5 5.5 22.3807 5.5 21ZM8 19.5C7.17157 19.5 6.5 20.1716 6.5 21C6.5 21.8284 7.17157 22.5 8 22.5C8.82843 22.5 9.5 21.8284 9.5 21C9.5 20.1716 8.82843 19.5 8 19.5Z"
+                fill="current-color"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17.5 21C17.5 19.6193 18.6193 18.5 20 18.5C21.3807 18.5 22.5 19.6193 22.5 21C22.5 22.3807 21.3807 23.5 20 23.5C18.6193 23.5 17.5 22.3807 17.5 21ZM20 19.5C19.1716 19.5 18.5 20.1716 18.5 21C18.5 21.8284 19.1716 22.5 20 22.5C20.8284 22.5 21.5 21.8284 21.5 21C21.5 20.1716 20.8284 19.5 20 19.5Z"
+                fill="current-color"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1 0.5C0.723858 0.5 0.5 0.723858 0.5 1C0.5 1.27614 0.723858 1.5 1 1.5H4.58051C5.33783 5.79147 6.10333 10.0643 6.74931 14.3709C6.93288 15.5947 7.98416 16.5 9.22165 16.5H19.3597C20.5514 16.5 21.5774 15.6588 21.8111 14.4903L23.2503 7.29417C23.436 6.36599 22.726 5.5 21.7795 5.5H7.16046C6.8575 5.5 6.57797 5.58901 6.34436 5.74093L5.49239 0.913107C5.45023 0.674179 5.24262 0.5 5 0.5H1ZM6.666 7.07417C6.62065 6.77187 6.85478 6.5 7.16046 6.5H21.7795C22.095 6.5 22.3316 6.78866 22.2698 7.09806L20.8305 14.2942C20.6903 14.9953 20.0747 15.5 19.3597 15.5H9.22165C8.47916 15.5 7.84839 14.9568 7.73825 14.2225L6.666 7.07417Z"
+                fill="current-color"
+              />
+            </svg>
+            <p class="div-item-textes"></p>
+            <p class="footer-item-list">Корзина</p>
+          </a>
+        </div>
         <button class="nav-item">
           <img src="../images/avatar.png" alt="heart" />
         </button>
