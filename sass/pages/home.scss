@@ -482,6 +482,12 @@ iframe {
   transform: scale(1.13);
 }
 
-.btn-danger {
-  background-color: red;
+.imagess {
+  fill: transparent;
+  stroke: $white-color;
+}
+
+.btn-danger .imagess {
+  fill: red;
+  stroke: red;
 }

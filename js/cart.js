@@ -28,6 +28,11 @@ getCartQuantityes();
 
 const favouriteNumber = document.querySelector(".div-item-texts");
 const favouriteNumbers = document.querySelector(".div-item-textsesss");
+const cartprice = document.querySelector(".cards-prices");
+
+const allPrice = document.querySelector("#total-amout");
+
+
 
 let favouriteProductsJson = localStorage.getItem(FAVOURITE);
 let favouriteProducts = JSON.parse(favouriteProductsJson) || [];
@@ -60,7 +65,7 @@ function getCartProductCard({
             </div>
             <div class="hero__cart__item__content">
             <h2>${description}</h2>
-            <p><span>${price}₽</span> за шт.</p>
+            <p><span class="cards-prices">${price}₽</span> за шт.</p>
             </div>
         </div>
         <div class="hero__cart__item__right">
@@ -69,7 +74,7 @@ function getCartProductCard({
                 <span class="card__cantent">${quantity}</span>
                 <button class="plus" onclick="increaseQuantity(${id})">+</button>
             </div>
-            <p class="product__price">${price} ₽</p>
+            <p class="product__price">${price * quantity} ₽</p>
         </div>
     </div>
   `;
@@ -115,3 +120,10 @@ function decreaseQuantity(id) {
 }
 
 getCartProducts();
+
+// function cartprices() {
+//   let ibrohim = cartprice * quantity.length;
+//   return ibrohim;
+// }
+
+// cartprices();

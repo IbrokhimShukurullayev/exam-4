@@ -162,6 +162,10 @@
   border-radius: 4px;
 }
 
+.card__plus-minus {
+  margin: 8px 0;
+}
+
 .minus,
 .plus {
   padding: 3px 40px;
@@ -208,11 +212,13 @@
 }
 
 .imagess {
-  fill: #FFF;
+  fill: transparent;
+  stroke: $white-color;
 }
+
 .btn-danger .imagess {
-  stroke: red;
   fill: red;
+  stroke: red;
 }
 
 .active .page-link {

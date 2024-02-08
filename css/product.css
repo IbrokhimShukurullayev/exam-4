@@ -568,7 +568,7 @@ ul {
 }
 
 #home {
-  background: #FBF8EC;
+  background: #fbf8ec;
 }
 
 .home {
@@ -611,7 +611,7 @@ ul {
   line-height: 150%;
 }
 .home__links {
-  color: var(--Grayscale-Hard, #8F8F8F);
+  color: var(--Grayscale-Hard, #8f8f8f);
   font-size: 12px;
   font-weight: 400;
   line-height: 150%;
@@ -694,7 +694,7 @@ ul {
   line-height: 150%;
 }
 .home-left-price-text {
-  color: var(--Grayscale-Light, #BFBFBF);
+  color: var(--Grayscale-Light, #bfbfbf);
   font-size: 12px;
   font-weight: 400;
   line-height: 150%;
@@ -709,7 +709,25 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 50px;
+}
+@media (min-width: 900px) {
+  .home-img {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 .home-price {
   display: -webkit-box;
@@ -740,7 +758,7 @@ ul {
   font-weight: 400;
   line-height: 150%;
   border-radius: 4px;
-  background: var(--Main-Primary, #F63);
+  background: var(--Main-Primary, #f63);
 }
 .home-left-link p {
   width: 207px;
@@ -756,7 +774,7 @@ ul {
      -moz-column-gap: 40px;
           column-gap: 40px;
   padding: 8px;
-  background: var(--Grayscale-Lightest, #F3F2F1);
+  background: var(--Grayscale-Lightest, #f3f2f1);
   margin-bottom: 4px;
 }
 .home-table-text {
@@ -886,7 +904,7 @@ ul {
   line-height: 150%;
 }
 .card-price-mainly-text {
-  color: var(--Grayscale-Light, #BFBFBF);
+  color: var(--Grayscale-Light, #bfbfbf);
   font-size: 12px;
   font-weight: 400;
   line-height: 150%;
@@ -911,19 +929,19 @@ ul {
 }
 .card-link {
   padding: 8px 85px;
-  color: var(--Main-Secondary, #70C05B);
+  color: var(--Main-Secondary, #70c05b);
   text-align: center;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
   border-radius: 4px;
-  border: 1px solid var(--Main-Secondary, #70C05B);
+  border: 1px solid var(--Main-Secondary, #70c05b);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .card-link:hover {
   color: #fff;
-  background-color: #F63;
+  background-color: #f63;
   border: 1px solid transparent;
 }
 .card-precent {
@@ -936,7 +954,7 @@ ul {
   border-radius: 4px;
   padding: 6px;
   text-align: center;
-  background: var(--Main-Primary, #F63);
+  background: var(--Main-Primary, #f63);
   top: 130px;
 }
 .card-img {
