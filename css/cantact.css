@@ -652,3 +652,7 @@ main {
   background-color: #70c05b;
   color: #fff;
 }
+
+iframe {
+  width: 100%;
+}

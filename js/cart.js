@@ -30,9 +30,13 @@ const favouriteNumber = document.querySelector(".div-item-texts");
 const favouriteNumbers = document.querySelector(".div-item-textsesss");
 const cartprice = document.querySelector(".cards-prices");
 
-const allPrice = document.querySelector("#total-amout");
+let totalPriceElement = document.getElementById("total-amout");
+let bookingButton = document.querySelector(".chekout__btn");
+let allPriceElement = document.querySelector(".all__prices");
+let totalAmount1 = document.getElementById("total-amout-1");
+let totalAmount2 = document.getElementById("total-amout-2");
 
-
+let totaldiscount = document.querySelector(".discoounts");
 
 let favouriteProductsJson = localStorage.getItem(FAVOURITE);
 let favouriteProducts = JSON.parse(favouriteProductsJson) || [];
@@ -56,6 +60,7 @@ function getCartProductCard({
   price,
   images,
   quantity,
+  discount,
 }) {
   return `
     <div class="hero__cart__item">
@@ -68,13 +73,18 @@ function getCartProductCard({
             <p><span class="cards-prices">${price}₽</span> за шт.</p>
             </div>
         </div>
+        <p class="card-precent" >${discount}%</p>
         <div class="hero__cart__item__right">
             <div class = "card__plus-minus">
                 <button class="minus" onclick="decreaseQuantity(${id})"> - </button>
                 <span class="card__cantent">${quantity}</span>
                 <button class="plus" onclick="increaseQuantity(${id})">+</button>
             </div>
-            <p class="product__price">${price * quantity} ₽</p>
+            <div>
+            <p class="product__price">${
+              price * quantity - (price * quantity * discount) / 100
+            } ₽</p>
+            <p class="product__prices">${price * quantity} ₽</p></div>
         </div>
     </div>
   `;
@@ -89,6 +99,26 @@ function getCartProducts() {
 
 getCartProducts();
 
+// bookingButton.addEventListener("click", function () {
+//   const totalPrice = getTotalPrice();
+
+//   if (totalPrice < 1000) {
+//     alert("Total price should be 1000 or more to proceed with booking.");
+//   } else {
+//     window.open("../pages/dastavka.html");
+//   }
+// });
+
+function getallPrice() {
+  let allPrice = 0;
+  cartProducts.forEach((pr) => {
+    allPrice += pr.price * pr.quantity;
+  });
+  allPriceElement.innerHTML = allPrice;
+  return allPrice;
+}
+getallPrice();
+
 function increaseQuantity(id) {
   cartProducts = cartProducts.map((pr) => {
     if (pr.id === id) {
@@ -97,6 +127,10 @@ function increaseQuantity(id) {
     return pr;
   });
   getCartProducts();
+  getallPrice();
+  getDiscountPrice();
+  getTotalPriced();
+  // totalPriceElement.innerHTML = totalPrice;
   localStorage.setItem("cart", JSON.stringify(cartProducts));
 }
 
@@ -116,14 +150,45 @@ function decreaseQuantity(id) {
   getCartQuantityes();
   getCartQuantity();
   cartKarzinus();
+  getallPrice();
+  getDiscountPrice();
+  getTotalPriced();
+  // totalPriceElement.innerHTML = totalPrice;
   localStorage.setItem("cart", JSON.stringify(cartProducts));
 }
 
 getCartProducts();
 
-// function cartprices() {
-//   let ibrohim = cartprice * quantity.length;
-//   return ibrohim;
-// }
+let modeBtn = document.getElementById("mode-btn");
 
-// cartprices();
+modeBtn.addEventListener("click", function () {
+  if (document.body.className != "dark") {
+    this.firstElementChild.src = "../images/light.svg";
+  } else {
+    this.firstElementChild.src = "../images/dark.svg";
+  }
+  document.body.classList.toggle("dark");
+});
+
+function getDiscountPrice() {
+  let totalDiscount = 0;
+  cartProducts.forEach((pr) => {
+    totalDiscount += (pr.price * pr.quantity * pr.discount) / 100;
+    totaldiscount.innerHTML = totalDiscount;
+  });
+}
+
+getDiscountPrice();
+
+function getTotalPriced() {
+  let totalPrice = 0;
+  cartProducts.forEach((pr) => {
+    totalPrice +=
+      pr.price * pr.quantity - (pr.price * pr.quantity * pr.discount) / 100;
+    totalPriceElement.innerHTML = totalPrice;
+    totalAmount1.innerHTML = totalPrice;
+    totalAmount2.innerHTML = totalPrice;
+  });
+}
+
+getTotalPriced();

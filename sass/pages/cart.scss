@@ -214,6 +214,7 @@ body {
   -webkit-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
+
 .hero__cart__item__content h2 {
   max-width: 450px;
   color: #414141;
@@ -319,6 +320,16 @@ body {
   font-weight: 700;
   line-height: 150%;
 }
+
+.product__prices {
+  padding-left: 30px;
+  text-decoration: line-through;
+  color: #414141;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
 @media (max-width: 940px) {
   .hero__cart__item__right .product__price {
     font-size: 14px;
@@ -505,4 +516,19 @@ body {
 .switch:checked::after {
   margin-left: var(--circle-size);
   background-color: var(--switch-color);
+}
+
+.card-precent {
+  position: absolute;
+  color: $white-color;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  border-radius: 3px;
+  padding: 4px;
+  text-align: center;
+  background: $primary-color;
+  top: 35px;
+  left: 400px;
 }

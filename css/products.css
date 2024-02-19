@@ -577,7 +577,6 @@ ul {
   font-size: 36px;
   font-weight: 700;
   line-height: 150%;
-  padding-top: 50px;
 }
 
 .homes {
@@ -655,7 +654,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 80px 0 40px 0;
+  padding: 0 0 40px 0;
 }
 .card-price-mainly {
   color: #414141;
@@ -840,6 +839,33 @@ ul {
 }
 
 .img:hover {
-  -webkit-transform: scale(1.13);
-          transform: scale(1.13);
+  -webkit-transform: scale(1.14);
+          transform: scale(1.14);
+}
+
+.line__cramp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 27px;
+  padding-top: 100px;
+}
+
+.line__cramp a {
+  color: #414141;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.line__cramp a:nth-child(2) {
+  color: silver;
 }

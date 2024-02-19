@@ -13,6 +13,17 @@ for (let i = 0; i < btn.length; i++) {
   });
 }
 
+let modeBtn = document.getElementById("mode-btn");
+
+modeBtn.addEventListener("click", function () {
+  if (document.body.className != "dark") {
+    this.firstElementChild.src = "images/light.svg";
+  } else {
+    this.firstElementChild.src = "images/dark.svg";
+  }
+  document.body.classList.toggle("dark");
+});
+
 const tabButtons = document.querySelectorAll(".location__list button");
 const tabContents = document.querySelectorAll(".tab__cantent ");
 
@@ -250,7 +261,7 @@ function getProducts({
             <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
           </svg>
         </button>
-        <p class="card-precent">20%</p>
+        <p class="card-precent">${discount}%</p>
         <div class="card-price-1">
           <h2 class="card-price-mainly">${price}</h2>
           <p class="card-price-mainly-text">С картой</p>
@@ -263,7 +274,17 @@ function getProducts({
       <h2 class="card-list">Apple</h2>
       <h2 class="card-list">${description}</h2>
       <img class="images" src=${getrating()} />
-      ${`<div class="card-links"><button onclick ="addToCart(${id})"  class="card-link">В корзину</button></div>`}
+      ${
+        productInCart
+          ? `<div class = "card__plus-minus">
+              <button class="minus" onclick="decreaseQuantity(${id})"> - </button>
+              <span class="card__cantent">${productInCart.quantity}</span>
+              <button class="plus" onclick="increaseQuantity(${id})">+</button>
+            </div>`
+          : `<div class="card-links">
+              <button onclick ="addToCart(${id})"  class="card-link">В корзину</button>
+            </div>`
+      }
     </div>
   `;
 }
@@ -273,24 +294,6 @@ function getFavouriteNumbers() {
 }
 
 getFavouriteNumbers();
-
-let result = products.filter((pr) => pr.description).slice(5, 9);
-
-result.forEach((el) => {
-  homeCard.innerHTML += getProducts(el);
-});
-
-let results = products.slice(-4);
-
-results.forEach((el) => {
-  newCard.innerHTML += getProducts(el);
-});
-
-let resultes = products.filter((pr) => pr.description).slice(0, 4);
-
-resultes.forEach((el) => {
-  buy.innerHTML += getProducts(el);
-});
 
 function addToCart(id) {
   let productFound = products.find((pr) => pr.id === id);
@@ -324,31 +327,47 @@ function addToFavourite(id) {
   getFavouriteNumbers();
 }
 
-// function increaseQuantity(id) {
-//   cartProducts = cartProducts.map((pr) => {
-//     if (pr.id === id) {
-//       pr.quantity++;
-//     }
-//     return pr;
-//   });
-//   ibrohim();
-//   localStorage.setItem("cart", JSON.stringify(cartProducts));
-// }
+function increaseQuantity(id) {
+  cartProducts = cartProducts.map((pr) => {
+    if (pr.id === id) {
+      pr.quantity++;
+    }
+    return pr;
+  });
+  localStorage.setItem("cart", JSON.stringify(cartProducts));
+}
 
-// function decreaseQuantity(id) {
-//   let productInCart = cartProducts.find((pr) => pr.id === id);
-//   if (productInCart.quantity === 1) {
-//     cartProducts = cartProducts.filter((pr) => pr.id !== id);
-//   } else {
-//     cartProducts = cartProducts.map((pr) => {
-//       if (pr.id === id) {
-//         pr.quantity--;
-//       }
-//       return pr;
-//     });
-//   }
-//   ibrohim();
-//   getCartQuantity();
-//   getFavouriteNumber();
-//   localStorage.setItem("cart", JSON.stringify(cartProducts));
-// }
+function decreaseQuantity(id) {
+  let productInCart = cartProducts.find((pr) => pr.id === id);
+  if (productInCart.quantity === 1) {
+    cartProducts = cartProducts.filter((pr) => pr.id !== id);
+  } else {
+    cartProducts = cartProducts.map((pr) => {
+      if (pr.id === id) {
+        pr.quantity--;
+      }
+      return pr;
+    });
+  }
+  getCartQuantity();
+  getFavouriteNumber();
+  localStorage.setItem("cart", JSON.stringify(cartProducts));
+}
+
+let result = products.filter((pr) => pr.description).slice(5, 9);
+
+result.forEach((el) => {
+  homeCard.innerHTML += getProducts(el);
+});
+
+let results = products.slice(-4);
+
+results.forEach((el) => {
+  newCard.innerHTML += getProducts(el);
+});
+
+let resultes = products.filter((pr) => pr.description).slice(0, 4);
+
+resultes.forEach((el) => {
+  buy.innerHTML += getProducts(el);
+});

@@ -7,7 +7,7 @@ const products = [
     price: "79",
     disprice: "70",
     rating: 5,
-    discount: "20%",
+    discount: 20,
     images: [
       "../images/products/1.png",
       "../images/products/2.png",
@@ -24,7 +24,7 @@ const products = [
     price: "55",
     disprice: "40",
     rating: 5,
-    discount: "20%",
+    discount: 15,
     images: [
       "../images/products/2.png",
       "../images/products/3.png",
@@ -41,7 +41,7 @@ const products = [
       "A staple food made from flour, water, and yeast, baked into a loaf.",
     price: 88,
     rating: 5,
-    discount: "20%",
+    discount: 25,
     images: [
       "../images/products/3.png",
       "../images/products/4.png",
@@ -58,7 +58,7 @@ const products = [
       "A green vegetable with a tree-like appearance, known for its high nutrient content.",
     price: 94,
     rating: 4.5,
-    discount: "20%",
+    discount: 20,
     images: [
       "../images/products/4.png",
       "../images/products/5.png",
@@ -75,7 +75,7 @@ const products = [
       "A root vegetable with a crunchy texture and a sweet, earthy flavor.",
     price: 82,
     rating: 5,
-    discount: 20,
+    discount: 30,
     images: [
       "../images/products/5.png",
       "../images/products/6.png",
@@ -92,7 +92,7 @@ const products = [
       "A dairy product made from milk, with a variety of textures and flavors.",
     price: 91,
     rating: 3.5,
-    discount: 50,
+    discount: 40,
     images: [
       "../images/products/6.png",
       "../images/products/7.png",
@@ -228,7 +228,7 @@ const products = [
       "A type of sausage served in a long roll, often used as a quick and convenient food.",
     price: 84,
     rating: 4.5,
-    discount: 50,
+    discount: 30,
     images: [
       "../images/products/14.png",
       "../images/products/15.png",
@@ -279,7 +279,7 @@ const products = [
       "Eggs are oval-shaped reproductive structures produced by female birds and some reptiles.",
     price: 70,
     rating: 4.5,
-    discount: 50,
+    discount: 40,
     images: [
       "../images/products/17.png",
       "../images/products/18.png",
@@ -398,7 +398,7 @@ const products = [
       "Oatmeal is a type of porridge made from oats that is often served for breakfast.",
     price: 94,
     rating: 4.5,
-    discount: 0,
+    discount: 20,
     images: [
       "../images/products/24.png",
       "../images/products/25.png",
@@ -432,7 +432,7 @@ const products = [
       "Pancakes are a popular breakfast food made from flour, eggs, and milk.",
     price: 63,
     rating: 4,
-    discount: 0,
+    discount: 20,
     images: [
       "../images/products/26.png",
       "../images/products/27.png",
@@ -517,7 +517,7 @@ const products = [
       "A grilled cheese sandwich is a hot sandwich made from cheese and bread.",
     price: 100,
     rating: 5,
-    discount: 50,
+    discount: 10,
     images: [
       "../images/products/31.png",
       "../images/products/32.png",
@@ -534,7 +534,7 @@ const products = [
       "Steak is a popular dinner dish made from a cut of beef that is usually grilled or pan-fried.",
     price: 63,
     rating: 4.5,
-    discount: 20,
+    discount: 35,
     images: [
       "../images/products/32.png",
       "../images/products/33.png",
@@ -551,7 +551,7 @@ const products = [
       "Salmon is a type of fish that is often grilled or baked and served as a main course.",
     price: 82,
     rating: 4.5,
-    discount: 20,
+    discount: 10,
     images: [
       "../images/products/33.png",
       "../images/products/34.png",
@@ -568,7 +568,7 @@ const products = [
       "Chicken Alfredo is a pasta dish made with chicken, alsjfkdlkasdfhlkjh.",
     price: 94,
     rating: 4,
-    discount: 20,
+    discount: 30,
     images: [
       "../images/products/34.png",
       "../images/products/35.png",

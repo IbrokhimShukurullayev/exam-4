@@ -460,7 +460,7 @@ iframe {
 
 .dark .card,
 .dark .row-card {
-  // border: 1px solid $white-color;
+  border: 1px solid $white-color;
   background-color: $dark-color;
 }
 
@@ -469,22 +469,26 @@ iframe {
   border: 1px solid #e5ffde;
 }
 
-.new__card .card-precent {
-  background-color: transparent;
-  display: none;
-}
+// .new__card .card-precent {
+//   background-color: transparent;
+//   display: none;
+// }
 
 .img {
   transform: scale(1.1);
 }
 
 .img:hover {
-  transform: scale(1.13);
+  transform: scale(1.14);
 }
 
 .imagess {
   fill: transparent;
   stroke: $white-color;
+}
+
+.dark .imagess {
+  fill: transparent;
 }
 
 .btn-danger .imagess {
