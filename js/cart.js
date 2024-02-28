@@ -99,15 +99,11 @@ function getCartProducts() {
 
 getCartProducts();
 
-// bookingButton.addEventListener("click", function () {
-//   const totalPrice = getTotalPrice();
+bookingButton.addEventListener("click", function () {
+  const totalPrice = getallPrice();
 
-//   if (totalPrice < 1000) {
-//     alert("Total price should be 1000 or more to proceed with booking.");
-//   } else {
-//     window.open("../pages/dastavka.html");
-//   }
-// });
+  window.open("../pages/dastavka.html");
+});
 
 function getallPrice() {
   let allPrice = 0;
@@ -174,7 +170,7 @@ function getDiscountPrice() {
   let totalDiscount = 0;
   cartProducts.forEach((pr) => {
     totalDiscount += (pr.price * pr.quantity * pr.discount) / 100;
-    totaldiscount.innerHTML = totalDiscount;
+    totaldiscount.innerHTML = totalDiscount.toFixed(1);
   });
 }
 
@@ -185,9 +181,9 @@ function getTotalPriced() {
   cartProducts.forEach((pr) => {
     totalPrice +=
       pr.price * pr.quantity - (pr.price * pr.quantity * pr.discount) / 100;
-    totalPriceElement.innerHTML = totalPrice;
-    totalAmount1.innerHTML = totalPrice;
-    totalAmount2.innerHTML = totalPrice;
+    totalPriceElement.innerHTML = totalPrice.toFixed(1);
+    totalAmount1.innerHTML = totalPrice.toFixed(1);
+    totalAmount2.innerHTML = totalPrice.toFixed(1);
   });
 }
 
