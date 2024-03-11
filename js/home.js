@@ -1,14 +1,10 @@
 let count = 0;
 const btn = document.querySelectorAll(".card-link");
 const span = document.querySelector(".div-item-text");
-// if (count == 0) {
-//   span.style.display = "none"
-// }
 
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", () => {
     count++;
-    // span.style.display = "inline-block";
     span.innerHTML = count;
   });
 }
@@ -50,8 +46,6 @@ tabButtons.forEach((el, i) => {
   });
 });
 
-// mapping
-
 const homeCard = document.querySelector(".home-cards");
 const newCard = document.querySelector(".new__card");
 const buy = document.querySelector(".buy");
@@ -80,132 +74,6 @@ function getCartQuantityes() {
 }
 
 getCartQuantityes();
-
-// const products = [
-//   {
-//     name: "Г/Ц Блинчики с мясом вес, Россия",
-//     price: "50,50 ₽",
-//     disPrice: "44,50 ₽",
-//     img: "../images/image (2).svg",
-//     discount: "-50%",
-//     names: "С картой",
-//     text: "Обычная",
-//     rating: 3,
-//   },
-//   {
-//     name: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
-//     price: "50,50 ₽",
-//     disPrice: "44,50 ₽",
-//     img: "../images/image (5).png",
-//     discount: "-50%",
-//     names: "С картой",
-//     rating: 3.5,
-//   },
-//   {
-//     name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
-//     price: "50,50 ₽",
-//     disPrice: "44,50 ₽",
-//     img: "../images/kitob.png",
-//     discount: "-50%",
-//     names: "С картой",
-//     text: "Обычная",
-//     rating: 3.5,
-//   },
-//   {
-//     name: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
-//     price: "50,50 ₽",
-//     disPrice: "44,50 ₽",
-//     img: "../images/kitob2.png",
-//     discount: "-50%",
-//     names: "С картой",
-//     text: "Обычная",
-//     rating: 4.5,
-//   },
-// ];
-// const newProducts = [
-//   {
-//     name: "Г/Ц Блинчики с мясом вес, Россия",
-//     price: "",
-//     disPrice: "599,99 ₽",
-//     img: "../images/image (2).svg",
-//     discount: "",
-//     names: "",
-//     text: "",
-//     rating: 5,
-//   },
-//   {
-//     name: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
-//     price: "",
-//     disPrice: "44,50 ₽",
-//     img: "../images/image (5).png",
-//     discount: "",
-//     names: "",
-//     text: "",
-//     rating: 2,
-//   },
-//   {
-//     name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
-//     price: "",
-//     disPrice: "159,99 ₽",
-//     img: "../images/kitob.png",
-//     discount: "",
-//     names: "",
-//     text: "",
-//     rating: 1,
-//   },
-//   {
-//     name: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
-//     price: "",
-//     disPrice: "49,39 ₽",
-//     img: "../images/kitob2.png",
-//     discount: "",
-//     names: "",
-//     text: "",
-//     rating: 5,
-//   },
-// ];
-// const buyProduct = [
-//   {
-//     name: "Г/Ц Блинчики с мясом вес, Россия",
-//     price: "",
-//     disPrice: "599,99 ₽",
-//     img: "../images/image (2).svg",
-//     discount: "",
-//     names: "",
-//     text: "",
-//     rating: 5,
-//   },
-//   {
-//     name: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
-//     price: "",
-//     disPrice: "44,50 ₽",
-//     img: "../images/image (5).png",
-//     discount: "",
-//     names: "",
-//     text: "",
-//     rating: 2,
-//   },
-//   {
-//     name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
-//     price: "",
-//     disPrice: "159,99 ₽",
-//     img: "../images/kitob.png",
-//     discount: "",
-//     names: "",
-//     text: "",
-//     rating: 1,
-//   },
-//   {
-//     name: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
-//     price: "",
-//     disPrice: "49,39 ₽",
-//     img: "../images/kitob2.png",
-//     discount: "",
-//     names: "",
-//     text: "",
-//     rating: 5,
-//   },
-// ];
 
 const favouriteNumber = document.querySelector(".div-item-texts");
 const favouriteNumbers = document.querySelector(".div-item-textsesss");
@@ -294,6 +162,23 @@ function getFavouriteNumbers() {
 }
 
 getFavouriteNumbers();
+let result = products.filter((pr) => pr.description).slice(5, 9);
+
+result.forEach((el) => {
+  homeCard.innerHTML += getProducts(el);
+});
+
+let results = products.slice(-4);
+
+results.forEach((el) => {
+  newCard.innerHTML += getProducts(el);
+});
+
+let resultes = products.filter((pr) => pr.description).slice(0, 4);
+
+resultes.forEach((el) => {
+  buy.innerHTML += getProducts(el);
+});
 
 function addToCart(id) {
   let productFound = products.find((pr) => pr.id === id);
@@ -313,7 +198,6 @@ function addToCart(id) {
   getCartQuantityes();
   localStorage.setItem("cart", JSON.stringify(cartProducts));
 }
-
 function addToFavourite(id) {
   let checkFavourite = favouriteProducts.find((el) => el.id === id);
   let product = products.find((el) => el.id === id);
@@ -353,21 +237,3 @@ function decreaseQuantity(id) {
   getFavouriteNumber();
   localStorage.setItem("cart", JSON.stringify(cartProducts));
 }
-
-let result = products.filter((pr) => pr.description).slice(5, 9);
-
-result.forEach((el) => {
-  homeCard.innerHTML += getProducts(el);
-});
-
-let results = products.slice(-4);
-
-results.forEach((el) => {
-  newCard.innerHTML += getProducts(el);
-});
-
-let resultes = products.filter((pr) => pr.description).slice(0, 4);
-
-resultes.forEach((el) => {
-  buy.innerHTML += getProducts(el);
-});

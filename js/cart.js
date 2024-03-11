@@ -73,7 +73,7 @@ function getCartProductCard({
             <p><span class="cards-prices">${price}₽</span> за шт.</p>
             </div>
         </div>
-        <p class="card-precent" >${discount}%</p>
+        <p class="card-precent" ${ discount === 0 ? "no__discount" : "" }>${discount}%</p>
         <div class="hero__cart__item__right">
             <div class = "card__plus-minus">
                 <button class="minus" onclick="decreaseQuantity(${id})"> - </button>
@@ -188,3 +188,31 @@ function getTotalPriced() {
 }
 
 getTotalPriced();
+
+
+
+
+function isToday(date) {
+  let currentDate = new Date();
+
+  let currentYear = currentDate.getFullYear();
+  let currentMonth = currentDate.getMonth();
+  let currentDay = currentDate.getDate();
+
+  let givenYear = date.getFullYear();
+  let givenMonth = date.getMonth();
+  let givenDay = date.getDate();
+
+  return (
+    currentYear === givenYear &&
+    currentMonth === givenMonth &&
+    currentDay === givenDay
+  );
+}
+
+// var today = new Date(); // Create a date object for today
+// var otherDate = new Date(2024, 2, 4); // Create a date object for March 4, 2024
+
+// Check if the given date is today
+console.log(isToday(today)); // This will print 'true'
+// console.log(isToday(otherDate));

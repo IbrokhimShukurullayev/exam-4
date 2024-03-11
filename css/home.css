@@ -747,12 +747,13 @@ ul {
           align-items: center;
   background-color: #ddd;
   border-radius: 4px;
+  margin: 8px 0;
 }
 .card .minus,
 .card .plus {
   padding: 3px 40px;
   font-size: 30px;
-  background-color: #4ee334;
+  background-color: #70c05b;
   color: #fff;
 }
 .card .plus {
